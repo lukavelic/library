@@ -1,10 +1,12 @@
 let myLibrary = [];
 
-function Book (title, author, numberOfPages, readStatus) {
-    this.title = title,
-    this.author = author,
-    this.numberOfPages = numberOfPages
-    this.readStatus = readStatus
+class Book {
+  constructor (title, author, numberOfPages, readStatus) {
+    this.title = title;
+    this.author = author;
+    this.numberOfPages = numberOfPages;
+    this.readStatus = readStatus;
+  }
 }
 
 function addBookToLibrary() {
@@ -80,7 +82,4 @@ const book1 = new Book ('The Hobbit', 'J.R.R. Tolkien', 500, true)
 const book2 = new Book ('Harry Potter', 'J.K. Rowling', 450, true)
 myLibrary.push(book1);
 myLibrary.push(book2);
-createList(myLibrary)
-
-
-
+createList(myLibrary);
