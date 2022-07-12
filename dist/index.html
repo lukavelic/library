@@ -18,14 +18,16 @@
                 <p id="addBook">Add a Book</p>
                 <button id="closeModal">&times;</button>
             </div>
-            <input type="text" id="title" placeholder="Title" required>
-            <input type="text" id="author" placeholder="Author" required>
-            <input type="number" id="numberOfPages" placeholder="Number of Pages" min="0" required>
-            <div id="checkbox">
-                <input type="checkbox" id="readUnread">
-                <label for="readUnread">Read Status</label>
-            </div>
-            <button type="submit" id="submitButton">ADD</button>
+            <form class="modal-form" action="#" method="get">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="number" id="numberOfPages" placeholder="Number of Pages" min="1" required>
+                <div id="checkbox">
+                    <input type="checkbox" id="readUnread">
+                    <label for="readUnread">Read Status</label>
+                </div>
+                <button type="submit" id="submit-button">ADD</button>
+            </form>
         </div>
     </div>
     <div class="list">

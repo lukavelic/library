@@ -114,9 +114,19 @@ li {
     border-radius: 10px;
 }
 
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 input {
     margin: 10px;
     padding: 5px;
+}
+
+#checkbox {
+    margin: auto;
 }
 
 .firstRow {
@@ -131,7 +141,7 @@ input {
     text-align: center;
 }
 
-#submitButton {
+#submit-button {
     height: 40px;
     width: 70px;
     margin-top: 15px;
