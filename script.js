@@ -41,16 +41,19 @@ function createList(array) {
             readStatus = 'finished'
         } else { readStatus = 'not finished yet'}
         newList.innerText = `${book.title} by ${book.author}, ${book.numberOfPages} pages, ${readStatus}.`
-        newList.innerHTML += `<button type="submit" id="removeBook" data-key="${i}">&times;</button>`;
+        newList.innerHTML += `<button type="submit" id="removeBook" data-btn="${i}">&times;</button>`;
         listParent.appendChild(newList);
-        let removeButton = document.querySelector(`[data-key="${i}"]`)
+        let removeButton = document.querySelector(`[data-btn="${i}"]`)
         removeButton.addEventListener('click', removeBookAction);
+
+        console.log(removeButton)
     }
 }
 
 function removeBookAction (event) {
-    let buttonKey = event.target.dataset.key;
+    let buttonKey = event.target.dataset.btn;
     let listElement = document.querySelector(`[data-key="${buttonKey}"]`);
+    console.log(listElement)
     listElement.remove();
     myLibrary.splice(buttonKey, 1);
 }
